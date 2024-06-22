@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="header">
+        <div class="proimage">
+          <!-- <i class="pi pi-arrow-left" (click)="back()"></i> -->
+          <img src="assets/Group 98.svg" alt="image" />       
+        </div>
+        <div class="profile">
+          <div class="details">
+            <p class="name">{{loggedInUserName}}</p>
+            <p class="job">{{userJobTitle}}</p>
+          </div>
+          <div class="detailsimg">
+            <img src="{{loggedInUserImage}}" alt="image" />
+          </div>
+        </div>
+      </div>
+      <div class="eventcard">
+        <div class="eventheader">
+            <div class="eventheader1">
+                <i class="pi pi-arrow-left" (click)="back()"></i>
+                <div class="hackathontext">Hackathon</div>
+            </div>
+            <div class="eventheader2">
+                <button>+ Create</button>
+                <button>⚙ Admin</button>
+            </div>
+        </div>
+        <div class="liveEvent">
+            <div class="livetext">Live - {{finalArray.length}}</div>
+            <div class="liveCardContent">
+              <div *ngFor="let item of finalArray">
+                <div class="liveCard">
+                  <!-- {{item.name}}-test -->
+                  <img src="{{item.event.image}}" alt="image">
+                  <div class="eventnamecount">
+                    <div class="eventname">
+                      {{item.event.name}}
+                    </div>
+                    <div class="eventcount">
+                      <img src="assets/person_FILL1_wght400_GRAD0_opsz24 1.svg" alt="profile">
+                      <sup>{{item.registrationCount}}</sup>
+                    </div>
+                  </div>
+                  <div class="endsin">
+                    Ends In
+                  </div>
+                  <div class="endstime">
+                    <div class="endtimedays">
+                      <span class="days">{{item.daysLeftText}}</span>
+                      <span>Days</span>
+                    </div>
+                    <div class="endtimehours">
+                      <span class="hours">{{item.hoursLeftText}}</span>
+                      <span>Hours</span>
+                    </div>
+                    <div class="endtimeminutes">
+                      <span class="minutes">{{item.minutesLeftText}}</span>
+                      <span>Minutes</span>
+                    </div>
+                  </div>
+                  <button class="start">Start</button>
+                </div>
+              </div> 
+            </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotOIn UI</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="proimage">
+        <i class="pi pi-arrow-left" (click)="back()"></i>
+        <img src="assets/Group 98.svg" alt="image" />       
+      </div>
+      <div class="profile">
+        <div class="details">
+          <p class="name">{{loggedInUserName}}</p>
+          <p class="job">{{userJobTitle}}</p>
+        </div>
+        <div class="detailsimg">
+          <img src="{{loggedInUserImage}}" alt="image" />
+        </div>
+      </div>
+    </div>
+    <div class="bodyimage">
+      <img src="assets/64c8be987680187839839fb96e21308e.jpg" alt="bodyimage" />
+    </div>
+    <div class="body">
+      <p>
+        "Innovate. Inspire. Implement. Submit your ideas and shape our future."
+      </p>
+      <div class="card">
+        <div class="card1">
+          <img src="assets/Ideathon.svg" alt="ideathon" />
+          <div class="ideathonquote">
+            "Start submitting your innovative ideas and collaborate with fellow
+            visionaries!"
+          </div>
+          <div class="ideathonquotecontent">
+            "Welcome to our innovation hub! Here, you can submit your
+            groundbreaking ideas, explore submissions from others, and team up
+            to bring the best concepts to life. Dive in, share your creativity,
+            and collaborate with other idea submitters to transform innovation
+            into reality. Together, we can shape the future of our
+            organization!"
+          </div>
+          <button>Let's Begin</button>
+        </div>
+        <div class="card2">
+          <img src="assets/Layer_1.svg" alt="ideathon" />
+          <div class="ideathonquote">
+            "Join hackathon events, submit your innovative ideas, form a team,
+            and compete to win!"
+          </div>
+          <div class="ideathonquotecontent">
+            "Get ready to unleash your creativity and compete for exciting
+            prizes! Participate in our hackathon events where you can submit
+            your innovative ideas, team up with fellow enthusiasts, and navigate
+            through multiple levels of competition. From idea submission to
+            project demos, each stage brings you closer to winning. Dive into
+            the challenge, collaborate, and showcase your brilliance to become a
+            hackathon champion!"
+          </div>
+          <button (click)="hackathon()">Let's Begin</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

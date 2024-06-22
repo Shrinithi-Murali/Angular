@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logindiv">
+        <div class="loginimg">
+            <img src="assets/730_generated.jpg" alt="image">
+        </div>
+        <div class="form">
+            <div class="Logintext">Log In</div>
+            <div class="formcontrol">
+                <label for="">User Name:</label>
+                <input type="text" pInputText [(ngModel)]="Username" />
+                <label for="">Password:</label>
+                <p-password [(ngModel)]="Password" [toggleMask]="true"/>
+                <p-button label="Submit" (click)="login()"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
